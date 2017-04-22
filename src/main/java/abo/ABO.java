@@ -25,7 +25,6 @@ import buildcraft.transport.ItemPipe;
 import buildcraft.transport.Pipe;
 import buildcraft.transport.PipeTransportFluids;
 import buildcraft.transport.stripes.StripesHandlerRightClick;
-import com.google.common.eventbus.EventBus;
 import cpw.mods.fml.common.*;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -39,15 +38,12 @@ import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameData;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
-import cpw.mods.fml.relauncher.IFMLCallHook;
-import cpw.mods.fml.relauncher.IFMLLoadingPlugin;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import da3dsoul.ShapeGen.ShapeGen;
-import da3dsoul.reference.Metadata;
 import da3dsoul.scaryGen.SaveHandler.EnderInventorySaveHandler;
 import da3dsoul.scaryGen.blocks.BlockLargeButton;
-import da3dsoul.scaryGen.blocks.BlockNoCrossing;
+//import da3dsoul.scaryGen.blocks.BlockNoCrossing;
 import da3dsoul.scaryGen.blocks.BlockSandStone;
 import da3dsoul.scaryGen.blocks.ItemSandStone;
 import da3dsoul.scaryGen.generate.BiomeStoneGen;
@@ -315,7 +311,7 @@ public class ABO{
                     new Object[]{"ABA", "ACA", "DED", 'A', BuildCraftCore.ironGearItem,
                             'B', BuildCraftCore.diamondGearItem, 'C', Items.clock, 'D', Blocks.stone, 'E', Items.redstone});
 
-            brickNoCrossing = (new BlockNoCrossing(Material.rock)).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setBlockName("brickNoCrossing").setCreativeTab(CreativeTabs.tabBlock).setBlockTextureName("brick");
+            //brickNoCrossing = (new BlockNoCrossing(Material.rock)).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setBlockName("brickNoCrossing").setCreativeTab(CreativeTabs.tabBlock).setBlockTextureName("brick");
 
             GameRegistry.registerBlock(brickNoCrossing, "brickNoCrossing");
             addFullRecipe(new ItemStack(ABO.brickNoCrossing), new Object[] { "#", '#', new ItemStack(Blocks.brick_block) });
